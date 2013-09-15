@@ -1,0 +1,146 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.clicavel {
+    cursor: pointer;
+}
+
+.avatar-container {
+    text-align: center;
+}
+
+.botao-opcao-perfil {
+    width: 250px;
+    margin-top: 3px;
+}
+
+.add-como-amigo {
+    background: url(/assets/glyphicons_006_user_add.png) no-repeat 10px;
+}
+
+.albuns {
+    background: url(/assets/glyphicons_011_camera.png) no-repeat 10px;
+}
+
+.amigos {
+    background: url(/assets/glyphicons_043_group.png) no-repeat 10px;
+}
+
+.modal-sem-linha {
+    border-bottom: 0px;
+}
+
+.imagem-modal-extendida {
+    width: 500px;
+}
+
+.foto-solicitacao-amizade {
+    width: 50px;
+}
+
+.solicitacao-amizade-pendente a:hover {
+    text-decoration: none;
+}
+
+.solicitacao-amizade-pendente .nome-usuario-solicitante {
+    color: #c09853;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.botao-largura-fixa {
+    width: 80px !important;
+}
+
+.caixa-pesquisa-usuarios {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.usuario-pesquisa {
+    background-color: rgb(250, 250, 250);
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    height: 150px;
+}
+
+.usuario-pesquisa p {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.informe-nome-para-pesquisa {
+    height: 40px;
+}
+
+.foto-usuario-pesquisado {
+    max-width: 80px;
+}
+
+.container-carregar-mais {
+    text-align: center;
+}
+
+.botao-carregar-mais {
+    margin-top: 30px;
+}
+
+#botao-carregar-mais {
+    display: none;
+}
+
+.field_with_errors {
+    padding: 5px;
+    background-color: rgb(236, 145, 145);
+    border: 1px solid red;
+    display: table;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .usuario-pesquisa {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .botao-carregar-mais {
+        width: 50%;
+    }
+
+    .solicitacao-amizade-pendente {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .usuario-pesquisa {
+        width: 30%;
+    }
+
+    .caixa-pesquisa-usuarios {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

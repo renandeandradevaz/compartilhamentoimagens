@@ -1,0 +1,12 @@
+
+<input type='hidden' id='controller' value='perfil' />
+<input type='hidden' id='metodo-auto-complete' value='auto_complete_amigos' />
+<input type='hidden' id='metodo-carregar-mais' value='carregar_mais_amigos' />
+
+<%= render '/sharedviews/pesquisa' %>
+
+<script> 
+
+ pesquisarUsuarios($("#metodo-auto-complete").val());
+
+</script>

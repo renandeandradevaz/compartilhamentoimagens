@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-4 avatar-container">
+    <img class='img-thumbnail clicavel' src="<%= @usuario.imagem_avatar.imagem.url(:medio) %>" data-toggle="modal" data-target="#myModal" >
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header modal-sem-linha">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+          </div>
+          <div class="modal-body">
+            <img class='imagem-modal-extendida' src="<%= @usuario.imagem_avatar.imagem.url(:grande) %>">
+          </div>
+
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <br><br>
+
+    <a class="btn btn-default botao-opcao-perfil add-como-amigo" href="/perfil/<%= @usuario.atalho %>/add">Adicionar
+      como amigo</a> <br>
+    <a class="btn btn-default botao-opcao-perfil albuns" href="#">Álbuns</a> <br>
+    <a class="btn btn-default botao-opcao-perfil amigos" href="/perfil/<%= @usuario.atalho %>/amigos">Amigos</a> <br>
+
+  </div>
+
+  <div class="col-md-8">
+
+    <h1> <%= @usuario.name %>  </h1>
+    <h4> /<%= @usuario.atalho %>  </h4>
+    <h4> <%= @usuario.email %>  </h4>
+
+    <br><br>
+
+    <h5><strong> Informações pessoais </strong></h5>
+
+    <section>
+
+      <%= @usuario.informacoesPessoais %>
+
+    </section>
+
+  </div>
+
+</div>
+
+

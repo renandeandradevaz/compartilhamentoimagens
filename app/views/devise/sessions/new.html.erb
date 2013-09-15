@@ -1,0 +1,38 @@
+
+<%= stylesheet_link_tag "login", media: "all", "data-turbolinks-track" => true %>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-signin"}) do |f| %> 
+
+  <% flash.each do |name, msg| %>
+
+	  <% if msg.class == Array %>
+	    <% msg.each do |message| %>
+	      <%= content_tag :div, message, :id => "flash_#{name}", :class => "alert alert-danger" %>
+	    <% end %>
+	  <% else %>
+
+	    <%= content_tag :div, msg, :id => "flash_#{name}" , :class => "alert alert-danger" %>
+
+	  <% end %>
+   <% end %>
+
+  <%= f.email_field :email, :autofocus => true, :class => 'form-control', :placeholder => 'Email' %>
+
+  <%= f.password_field :password, :class => 'form-control', :style => 'margin-top: 10px;', :placeholder => 'Senha' %>
+
+  <% if devise_mapping.rememberable? -%>
+     <%= f.label :remember_me, :class => 'checkbox' do %>
+        <%= f.check_box :remember_me %>
+	  Lembrar minha senha
+     <% end %>
+  <% end -%>
+
+  <%= f.submit :class => 'btn btn-lg btn-primary btn-block', :value => 'Entrar' %>
+
+  <br>  <br>
+
+  <%= render "devise/shared/links" %>
+
+<% end %>
+
+

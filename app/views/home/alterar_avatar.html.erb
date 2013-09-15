@@ -1,0 +1,12 @@
+<%= form_for(@imagem, :url => 'salvar_avatar', :class => 'form', :html => {:multipart => true}) do |f| %>
+
+    <div class="form-group">
+      <%= f.file_field :imagem %>
+    </div>
+
+    <%= f.submit :class => 'btn btn-primary', :value => 'Salvar' %>
+
+<% end %>
+
+
+

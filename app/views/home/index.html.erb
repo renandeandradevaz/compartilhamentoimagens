@@ -1,0 +1,48 @@
+
+<% if !@solicitacoes_amizades.blank? %>
+ <h4 style="rgb(105, 99, 99)" >Solicitações de amizade pendentes:</h4>
+ <% @solicitacoes_amizades.each do |usuario| %>
+      <div class="alert alert-warning solicitacao-amizade-pendente" id='<%= usuario.atalho %>' >
+        <img class='foto-solicitacao-amizade' src="<%= usuario.imagem_avatar.imagem.url(:medio) %>">
+        <a class='nome-usuario-solicitante' href="/perfil/<%= usuario.atalho %>" > <%= usuario.name %> </a>
+        <a class='btn btn-success botao-largura-fixa aceitarAmizade' > Aceitar </a>
+        <a class='btn btn-danger botao-largura-fixa recusarAmizade'> Recusar </a>
+      </div>
+ <% end %> 
+<% end %>
+
+<div class="row">
+  <div class="col-md-4 avatar-container">
+     <img class='img-thumbnail' src="<%= current_usuario.imagem_avatar.imagem.url(:medio) %>">
+
+    <br>
+    <div style='margin-top: 5px;' >
+       <a href="/home/alterar_avatar">Trocar a foto</a>
+    </div>
+
+  </div>
+
+  <div class="col-md-8">
+
+     <h1> <%= current_usuario.name %>  </h1>
+     <h4> /<%= current_usuario.atalho %>  </h4>
+     <h4> <%= current_usuario.email %>  </h4>
+
+     <br><br> 
+  
+     <h5> <strong> Informações pessoais </strong> </h5>
+
+     <section>
+
+        <%= current_usuario.informacoesPessoais %>
+
+     </section>
+   
+     <br>
+
+     <a href="/home/alterarInformacoesPessoais" class="btn btn-info" > Alterar </a>
+
+  </div>
+</div>
+
+
