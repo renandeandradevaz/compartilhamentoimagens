@@ -1,2 +1,1 @@
-compartilhamentoimagens
-=======================
+Compartilhamento de imagens em rails
