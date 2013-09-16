@@ -3,7 +3,7 @@
  <h4 style="rgb(105, 99, 99)" >Solicitações de amizade pendentes:</h4>
  <% @solicitacoes_amizades.each do |usuario| %>
       <div class="alert alert-warning solicitacao-amizade-pendente" id='<%= usuario.atalho %>' >
-        <img class='foto-solicitacao-amizade' src="<%= usuario.imagem_avatar.imagem.url(:medio) %>">
+        <img class='foto-solicitacao-amizade' src="<%= usuario.obter_avatar.imagem.url(:medio) %>">
         <a class='nome-usuario-solicitante' href="/perfil/<%= usuario.atalho %>" > <%= usuario.name %> </a>
         <a class='btn btn-success botao-largura-fixa aceitarAmizade' > Aceitar </a>
         <a class='btn btn-danger botao-largura-fixa recusarAmizade'> Recusar </a>
@@ -13,7 +13,7 @@
 
 <div class="row">
   <div class="col-md-4 avatar-container">
-     <img class='img-thumbnail' src="<%= current_usuario.imagem_avatar.imagem.url(:medio) %>">
+     <img class='img-thumbnail' src="<%= current_usuario.obter_avatar.imagem.url(:medio) %>">
 
     <br>
     <div style='margin-top: 5px;' >

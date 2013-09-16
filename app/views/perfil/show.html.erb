@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-4 avatar-container">
-    <img class='img-thumbnail clicavel' src="<%= @usuario.imagem_avatar.imagem.url(:medio) %>" data-toggle="modal" data-target="#myModal" >
+    <img class='img-thumbnail clicavel' src="<%= @usuario.obter_avatar.imagem.url(:medio) %>" data-toggle="modal" data-target="#myModal" >
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">

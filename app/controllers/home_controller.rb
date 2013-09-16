@@ -4,17 +4,6 @@ class HomeController < ApplicationController
 
   def index
     @solicitacoes_amizades = current_usuario.pending_invited_by
-
-    @solicitacoes_amizades.each do |solicitacao|
-      if(solicitacao.imagem_avatar.nil?)
-        solicitacao.imagem_avatar = Imagem.new
-      end
-    end
-
-    if(current_usuario.imagem_avatar.nil?)
-      current_usuario.imagem_avatar = Imagem.new
-    end
-
   end
 
   def aceitar_amizade
