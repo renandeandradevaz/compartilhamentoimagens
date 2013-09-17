@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130915190111) do
+ActiveRecord::Schema.define(version: 20130917033739) do
+
+  create_table "albums", force: true do |t|
+    t.string   "nome"
+    t.integer  "usuario_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "albums", ["usuario_id"], name: "albums_usuario_id_fk", using: :btree
 
   create_table "friendships", force: true do |t|
     t.integer "friendable_id"
@@ -29,7 +38,10 @@ ActiveRecord::Schema.define(version: 20130915190111) do
     t.string   "imagem_content_type"
     t.integer  "imagem_file_size"
     t.datetime "imagem_updated_at"
+    t.integer  "album_id"
   end
+
+  add_index "imagems", ["album_id"], name: "imagems_album_id_fk", using: :btree
 
   create_table "usuarios", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -52,5 +64,9 @@ ActiveRecord::Schema.define(version: 20130915190111) do
 
   add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
   add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
+
+  add_foreign_key "albums", "usuarios", name: "albums_usuario_id_fk"
+
+  add_foreign_key "imagems", "albums", name: "imagems_album_id_fk"
 
 end

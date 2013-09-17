@@ -32,5 +32,6 @@ Compartilhamentoimagens::Application.routes.draw do
   resources :index
   resources :pesquisa_usuarios
   resources :amigos
+  resources :albums
 
 end

@@ -1,0 +1,9 @@
+<%= form_for(@album, :class => 'form', :html => {:multipart => true}) do |f| %>
+
+    <div class="form-group">
+      <%= f.file_field :imagens, :multiple => true %>
+    </div>
+
+    <%= f.submit :class => 'btn btn-primary', :value => 'Salvar' %>
+
+<% end %>
