@@ -33,8 +33,6 @@ class AlbumsController < ApplicationController
 
     @album = Album.find(params[:id])
 
-    puts @album.nome
-
   end
 
   private
