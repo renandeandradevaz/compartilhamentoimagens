@@ -29,6 +29,14 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def show
+
+    @album = Album.find(params[:id])
+
+    puts @album.nome
+
+  end
+
   private
   def album_params
     params.require(:album).permit(:nome)

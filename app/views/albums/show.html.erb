@@ -1,0 +1,17 @@
+<h3 class="conteudo-centralizado" contenteditable="true"> <%= @album.nome %> (Colocar icone de lápis e botão para salvar
+  alteração de nome de album) </h3>
+
+<div class="row">
+
+  <% @album.imagems.each do |imagem| %>
+
+      <div class="col-md-4 container-foto-album-pequena">
+
+        <img class="img-thumbnail foto-album-pequena" src="<%= imagem.imagem.url(:pequeno) %>">
+
+      </div>
+
+  <% end %>
+
+
+</div>

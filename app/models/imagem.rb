@@ -2,7 +2,7 @@ class Imagem < ActiveRecord::Base
 
   belongs_to :album
 
-  has_attached_file :imagem, :styles => {:medio => "400x400>", :grande => "800x800>"}, :default_url => "/assets/no-face.jpg"
+  has_attached_file :imagem, :styles => {:pequeno => "200x200>", :medio => "400x400>", :grande => "800x800>"}, :default_url => "/assets/no-face.jpg"
 
   def gerar_md5_nome_imagem
 
