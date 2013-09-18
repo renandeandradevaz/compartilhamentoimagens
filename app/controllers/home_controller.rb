@@ -27,9 +27,7 @@ class HomeController < ApplicationController
   def salvar_avatar
 
     imagem = Imagem.new(imagem_params)
-    nome_arquivo = imagem.imagem_file_name.split('.')[0]
-    extensao = imagem.imagem_file_name.split('.')[1]
-    imagem.imagem_file_name = (Digest::MD5.hexdigest nome_arquivo) << "." << extensao
+    imagem.gerar_md5_nome_imagem()
     imagem.save
 
     if(!current_usuario.imagem_avatar.nil?)
