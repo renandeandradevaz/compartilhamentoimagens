@@ -1,0 +1,12 @@
+<%= form_for(@album, :class => 'form', :html => {:multipart => true}) do |f| %>
+
+    <div class="form-group">
+      <h5> <b> Escolha as imagens do álbum </b> </h5>
+      <%= f.file_field :imagens, :multiple => true %>
+    </div>
+
+    <br>
+
+    <%= f.submit :class => 'btn btn-primary', :value => 'Salvar' %>
+
+<% end %>

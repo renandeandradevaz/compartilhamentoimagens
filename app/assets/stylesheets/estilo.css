@@ -28,6 +28,14 @@
     background: url(/assets/glyphicons_043_group.png) no-repeat 10px;
 }
 
+.lapis {
+    background: url(/assets/glyphicons_030_pencil.png) no-repeat 10px;
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .modal-sem-linha {
     border-bottom: 0px;
 }
@@ -119,6 +127,15 @@
 
 .conteudo-centralizado {
     text-align: center;
+}
+
+#confirmar-exclusao-fotos{
+    display: none;
+}
+
+.foto-a-ser-excluida{
+    border: 5px solid rgb(236, 99, 99);
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {

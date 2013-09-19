@@ -1,5 +1,14 @@
-<h3 class="conteudo-centralizado" contenteditable="true"> <%= @album.nome %> (Colocar icone de lápis e botão para salvar
-  alteração de nome de album) </h3>
+<h3 class="conteudo-centralizado" contenteditable="true"> <%= @album.nome %> <div class='lapis' >  </div>  </h3>
+
+<br>
+
+<div class="conteudo-centralizado">
+  <a class="btn btn-info btn-lg" href="/albums/<%= @album.id %>/edit" id='adicionar-fotos' >Adicionar fotos</a>
+  <a class="btn btn-danger btn-lg" href="#" id='remover-fotos' >Remover fotos</a>
+  <a class="btn btn-danger btn-lg" href="#" id='confirmar-exclusao-fotos' >Confirmar remoção</a>
+</div>
+
+<br>
 
 <div class="row">
 
@@ -7,11 +16,12 @@
 
       <div class="col-md-4 container-foto-album-pequena">
 
-        <img class="img-thumbnail foto-album-pequena" src="<%= imagem.imagem.url(:pequeno) %>">
+        <a href="semlinkainda">
+          <img class="img-thumbnail foto-album-pequena" src="<%= imagem.imagem.url(:pequeno) %>" id='<%= imagem.id %>' >
+        </a>
 
       </div>
 
   <% end %>
-
 
 </div>

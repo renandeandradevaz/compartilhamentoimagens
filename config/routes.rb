@@ -1,5 +1,5 @@
 Compartilhamentoimagens::Application.routes.draw do
-  
+
   devise_for :usuarios
 
   root to: 'index#index'
@@ -26,6 +26,8 @@ Compartilhamentoimagens::Application.routes.draw do
   match 'perfil/:id/amigos', to: 'perfil#amigos', via: [:get, :post]
 
   match 'home/salvar_avatar', to: 'home#salvar_avatar', via: [:get, :post]
+
+  match 'albums/excluir_imagens', to: 'albums#excluir_imagens', via: [:get, :post]
 
   resources :home
   resources :perfil

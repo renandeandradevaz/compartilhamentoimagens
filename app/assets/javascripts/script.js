@@ -22,6 +22,59 @@ $(document).ready(function () {
         pesquisarUsuarios($("#metodo-carregar-mais").val());
     });
 
+    $("#remover-fotos").on("click", function () {
+
+        alert("Selecione as fotos que deseja remover");
+        $("#adicionar-fotos").hide();
+        $("#remover-fotos").hide();
+        $("#confirmar-exclusao-fotos").show();
+
+        $(".foto-album-pequena").click(function (e) {
+
+            e.preventDefault();
+
+            if ($(this).hasClass("foto-a-ser-excluida")) {
+
+                $(this).removeClass("foto-a-ser-excluida");
+            }
+
+            else {
+                $(this).addClass("foto-a-ser-excluida");
+            }
+        });
+    });
+
+    $("#confirmar-exclusao-fotos").on("click", function () {
+
+        var ids = "";
+
+        $(".foto-a-ser-excluida").each(function(){
+
+            var id = $(this).attr("id");
+            ids += id + ",";
+        });
+
+        $.ajax({
+            url: "/albums/excluir_imagens",
+            data: {
+                ids_imagens: ids
+            },
+            success: function (data) {
+
+                $(".foto-a-ser-excluida").each(function(){
+
+                    $(this).parent().parent().remove();
+                });
+
+                $("#adicionar-fotos").show();
+                $("#remover-fotos").show();
+                $("#confirmar-exclusao-fotos").hide();
+            }
+        });
+
+        $( ".foto-album-pequena").unbind( "click" );
+    });
+
     $(window).scroll(function () {
 
         if ($(window).scrollTop() == $(document).height() - $(window).height()) {
@@ -54,7 +107,7 @@ function pesquisarUsuarios(metodo) {
 
             $(data.usuarios).each(function (i, usuario) {
 
-                if (jQuery("#" + usuario.id).length == 0) {
+                if ($("#" + usuario.id).length == 0) {
 
                     $("#usuarios-pesquisados").append('<div>');
                     $("#usuarios-pesquisados").find('div:last').attr('id', usuario.id);
