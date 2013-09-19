@@ -1,0 +1,23 @@
+<div class="conteudo-centralizado" >
+  <a class="btn btn-info btn-lg" href="/albums/new">Criar álbum</a>
+</div>
+
+<br>
+
+<div class="row">
+
+  <% @albums.each do |album| %>
+
+      <div class="col-md-4 container-foto-album-pequena">
+
+        <h4> <%= album.nome %> </h4>
+
+        <a href="/albums/<%= album.id %>" >
+          <img class="img-thumbnail foto-album-pequena" src="<%= album.imagems.first.imagem.url(:pequeno) %>"  >
+        </a>
+
+      </div>
+
+  <% end %>
+
+</div>

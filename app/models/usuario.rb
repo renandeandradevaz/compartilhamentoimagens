@@ -4,6 +4,8 @@ class Usuario < ActiveRecord::Base
 
   belongs_to :imagem_avatar, :class_name => "Imagem", :foreign_key => "imagem_avatar_id"
 
+  has_many :albums
+
   include Amistad::FriendModel
 
   # Include default devise modules. Others available are:

@@ -4,6 +4,8 @@ class AlbumsController < ApplicationController
 
   def index
 
+    @albums = current_usuario.albums
+
   end
 
   def new
