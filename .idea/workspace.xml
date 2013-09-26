@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b17363a8-e428-4c7c-8c5b-9f2e1f402e59" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compartilhamentoimagens.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/album.rb" afterPath="$PROJECT_DIR$/app/models/album.rb" />
     </list>
     <ignored path="compartilhamentoimagens.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b17363a8-e428-4c7c-8c5b-9f2e1f402e59" time="1380161404161" ignored="false" />
+    <file path="/album.rb" changelist="b17363a8-e428-4c7c-8c5b-9f2e1f402e59" time="1380161547621" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +40,7 @@
       <file leaf-file-name="album.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/album.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="2" selection-start="77" selection-end="77" vertical-scroll-proportion="0.07317073">
+            <state line="2" column="9" selection-start="43" selection-end="43" vertical-scroll-proportion="0.048780486">
               <folding />
             </state>
           </provider>
@@ -419,7 +430,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/models/album.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="77" selection-end="77" vertical-scroll-proportion="0.07317073">
+        <state line="2" column="9" selection-start="43" selection-end="43" vertical-scroll-proportion="0.048780486">
           <folding />
         </state>
       </provider>
