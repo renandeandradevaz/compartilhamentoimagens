@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917033739) do
+ActiveRecord::Schema.define(version: 20130926030731) do
 
   create_table "albums", force: true do |t|
     t.string   "nome"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20130917033739) do
   end
 
   add_index "albums", ["usuario_id"], name: "albums_usuario_id_fk", using: :btree
+
+  create_table "comentarios", force: true do |t|
+    t.string   "comentario"
+    t.integer  "usuario_id", null: false
+    t.integer  "imagem_id",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comentarios", ["imagem_id"], name: "comentarios_imagem_id_fk", using: :btree
+  add_index "comentarios", ["usuario_id"], name: "comentarios_usuario_id_fk", using: :btree
 
   create_table "friendships", force: true do |t|
     t.integer "friendable_id"
@@ -66,6 +77,9 @@ ActiveRecord::Schema.define(version: 20130917033739) do
   add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "albums", "usuarios", name: "albums_usuario_id_fk"
+
+  add_foreign_key "comentarios", "imagems", name: "comentarios_imagem_id_fk"
+  add_foreign_key "comentarios", "usuarios", name: "comentarios_usuario_id_fk"
 
   add_foreign_key "imagems", "albums", name: "imagems_album_id_fk"
 

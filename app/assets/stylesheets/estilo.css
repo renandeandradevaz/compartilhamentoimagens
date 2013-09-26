@@ -129,13 +129,19 @@
     text-align: center;
 }
 
-#confirmar-exclusao-fotos{
+#confirmar-exclusao-fotos {
     display: none;
 }
 
-.foto-a-ser-excluida{
+.foto-a-ser-excluida {
     border: 5px solid rgb(236, 99, 99);
     border-radius: 10px;
+}
+
+.comentar {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -154,7 +160,7 @@
         text-align: left;
     }
 
-    .container-foto-album-pequena{
+    .container-foto-album-pequena {
         margin-bottom: 15%;
     }
 

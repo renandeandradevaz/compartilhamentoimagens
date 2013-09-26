@@ -7,6 +7,8 @@ Compartilhamentoimagens::Application.routes.draw do
   get "home/alterarInformacoesPessoais"
   get "home/alterar_avatar"
 
+  get "fotos/comentar"
+
   resources :home do
    member do
     get :aceitar_amizade
@@ -35,5 +37,6 @@ Compartilhamentoimagens::Application.routes.draw do
   resources :pesquisa_usuarios
   resources :amigos
   resources :albums
+  resources :fotos
 
 end

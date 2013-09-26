@@ -75,6 +75,21 @@ $(document).ready(function () {
         $( ".foto-album-pequena").unbind( "click" );
     });
 
+    $("#botao-comentar").on("click", function () {
+
+        $.ajax({
+            url: "/fotos/comentar",
+            data: {
+                id_imagem: $(".imagem-grande-comentarios").attr("id"),
+                comentario: $("#texto-comentario").val()
+            },
+            success: function (data) {
+
+                console.log(data.comentario.comentario);
+            }
+        });
+    });
+
     $(window).scroll(function () {
 
         if ($(window).scrollTop() == $(document).height() - $(window).height()) {
