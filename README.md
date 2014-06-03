@@ -1,1 +1,1 @@
-Compartilhamento de imagens em rails
+Compartilhamento de imagens em rails + paperclip
